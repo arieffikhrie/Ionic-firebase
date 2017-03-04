@@ -47,41 +47,7 @@
 		</ion-item>
 		<ion-item>
 			<h2>Select Character</h2>
-			<img [src]="reminder.avatar" height="100">
-			<ion-grid>
-				<ion-row>
-					<ion-col><button clear ion-button icon-only (click)="updateAvatar($event)"><img src="assets/images/backpack.png"></button></ion-col>
-					<ion-col><button clear ion-button icon-only (click)="updateAvatar($event)"><img src="assets/images/ball.png"></button></ion-col>
-					<ion-col><button clear ion-button icon-only (click)="updateAvatar($event)"><img src="assets/images/basketball.png"></button></ion-col>
-					<ion-col><button clear ion-button icon-only (click)="updateAvatar($event)"><img src="assets/images/bear.png"></button></ion-col>
-					<ion-col><button clear ion-button icon-only (click)="updateAvatar($event)"><img src="assets/images/beer.png"></button></ion-col>
-					<ion-col><button clear ion-button icon-only (click)="updateAvatar($event)"><img src="assets/images/book.png"></button></ion-col>
-				</ion-row>
-				<ion-row>
-					<ion-col><button clear ion-button icon-only (click)="updateAvatar($event)"><img src="assets/images/box.png"></button></ion-col>
-					<ion-col><button clear ion-button icon-only (click)="updateAvatar($event)"><img src="assets/images/cake.png"></button></ion-col>
-					<ion-col><button clear ion-button icon-only (click)="updateAvatar($event)"><img src="assets/images/camera.png"></button></ion-col>
-					<ion-col><button clear ion-button icon-only (click)="updateAvatar($event)"><img src="assets/images/cat.png"></button></ion-col>
-					<ion-col><button clear ion-button icon-only (click)="updateAvatar($event)"><img src="assets/images/clock.png"></button></ion-col>
-					<ion-col><button clear ion-button icon-only (click)="updateAvatar($event)"><img src="assets/images/cloud.png"></button></ion-col>
-				</ion-row>
-				<ion-row>
-					<ion-col><button clear ion-button icon-only (click)="updateAvatar($event)"><img src="assets/images/game.png"></button></ion-col>
-					<ion-col><button clear ion-button icon-only (click)="updateAvatar($event)"><img src="assets/images/gift.png"></button></ion-col>
-					<ion-col><button clear ion-button icon-only (click)="updateAvatar($event)"><img src="assets/images/graduation.png"></button></ion-col>
-					<ion-col><button clear ion-button icon-only (click)="updateAvatar($event)"><img src="assets/images/mastercard.png"></button></ion-col>
-					<ion-col><button clear ion-button icon-only (click)="updateAvatar($event)"><img src="assets/images/moneybag.png"></button></ion-col>
-					<ion-col><button clear ion-button icon-only (click)="updateAvatar($event)"><img src="assets/images/movie.png"></button></ion-col>
-				</ion-row>
-				<ion-row>
-					<ion-col><button clear ion-button icon-only (click)="updateAvatar($event)"><img src="assets/images/rainbow.png"></button></ion-col>
-					<ion-col><button clear ion-button icon-only (click)="updateAvatar($event)"><img src="assets/images/rice.png"></button></ion-col>
-					<ion-col><button clear ion-button icon-only (click)="updateAvatar($event)"><img src="assets/images/spaghetti.png"></button></ion-col>
-					<ion-col><button clear ion-button icon-only (click)="updateAvatar($event)"><img src="assets/images/sun.png"></button></ion-col>
-					<ion-col><button clear ion-button icon-only (click)="updateAvatar($event)"><img src="assets/images/syringe.png"></button></ion-col>
-					<ion-col><button clear ion-button icon-only (click)="updateAvatar($event)"><img src="assets/images/throphy.png"></button></ion-col>
-				</ion-row>
-			</ion-grid>
+			<avatars [src]="reminder.avatar"></avatars>
 
 		</ion-item>
 	</ion-list>

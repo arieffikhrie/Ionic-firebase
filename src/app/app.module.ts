@@ -3,12 +3,14 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { AddReminderPage } from '../pages/add-reminder/add-reminder';
+import { AvatarsComponent } from '../components/avatars/avatars';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     AddReminderPage,
+    AvatarsComponent
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -18,6 +20,7 @@ import { AddReminderPage } from '../pages/add-reminder/add-reminder';
     MyApp,
     HomePage,
     AddReminderPage,
+    AvatarsComponent
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })

@@ -1,0 +1,12 @@
+<!--
+  Generated template for the Avatars component.
+
+  See https://angular.io/docs/ts/latest/api/core/index/ComponentMetadata-class.html
+  for more info on Angular 2 Components.
+-->
+<img [src]="src" height="100">
+<ion-grid>
+	<ion-row *ngFor="let rows of this.avatarsList">
+		<ion-col *ngFor="let cols of rows"><button clear ion-button icon-only (click)="updateAvatar($event)"><img [src]="cols"></button></ion-col>
+	</ion-row>
+</ion-grid>
