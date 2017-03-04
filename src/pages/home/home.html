@@ -1,0 +1,23 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-title style="text-align: center">
+			Ionic Blank
+		</ion-title>
+		<ion-buttons end>
+			<button ion-button icon-only color="royal" (click)="navigateToReminder()">
+				<ion-icon name="add"></ion-icon>
+			</button>
+		</ion-buttons>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+	sadsada = {{message}}
+	<div *ngIf="shouldShowEmptyState">
+		<img src="assets/images/clock.png">
+		<span>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod placeat quisquam delectus enim adipisci repellendus quo, recusandae sunt iure obcaecati.
+		</span>
+	</div>
+</ion-content>
+
