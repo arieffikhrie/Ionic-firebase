@@ -26,4 +26,9 @@ export class AddReminderPage {
 	createReminder(){
 		console.log(this.reminder);
 	}
+
+	updateAvatar(event){
+		this.reminder.avatar = event.target.src;
+	}
+
 }
