@@ -56,7 +56,6 @@ export class Avatars {
 		// 7 12
 		// 13 18
 		// 19 24
-		console.log(totalAvatar, row, arr);
 		return arr;
 	}
 

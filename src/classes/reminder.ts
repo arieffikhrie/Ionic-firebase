@@ -1,6 +1,7 @@
 import * as moment from 'moment';
 
 export class Reminder {
+	key: string;
 	name: string;
 	startDate: string;
 	endDate: string;
@@ -20,23 +21,32 @@ export class Reminder {
 		this.avatar = 'assets/images/clock.png';
 	}
 
+	getStartDateTimeObject(){
+		return moment(this.startDate + ' ' + this.startTime);
+	}
+	getEndDateTimeObject(){
+		return moment(this.endDate + ' ' + this.endTime);
+	}
+
 	getTotalDays(): number {
-		let reminderEndDate = moment(this.endDate + ' ' + this.endTime);
-		let reminderStartDate = new Date(this.startDate + ' ' + this.startTime);
+		let reminderEndDate = this.getEndDateTimeObject();
+		let reminderStartDate = this.getStartDateTimeObject();
 
-		let totalDays = reminderEndDate.diff(reminderStartDate, 'days');
-
-		return totalDays;
+		return reminderEndDate.diff(reminderStartDate, 'hours');
 	}
 
 	getLapsedDays(): number {
-		let reminderStartDate = moment(this.startDate, this.startTime);
-		let lapsedDays = moment(new Date()).diff(reminderStartDate, 'days');
-
-		return lapsedDays;
+		let todayDate = moment(new Date());
+		let reminderStartDate = this.getStartDateTimeObject();
+		return todayDate.diff(reminderStartDate, 'hours');
 	}
 
 	getPercentage(): number {
+		if ( this.getTotalDays() === 0 ) return 0;
 		return Math.round(this.getLapsedDays()/this.getTotalDays() * 100);
+	}
+
+	getTodayDate(){
+		return moment(new Date);
 	}
 }

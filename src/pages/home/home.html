@@ -1,7 +1,7 @@
 <ion-header>
 	<ion-toolbar>
 		<ion-title style="text-align: center">
-			Ionic Blank
+			LOLOLOL
 		</ion-title>
 		<ion-buttons end>
 			<button ion-button icon-only color="royal" (click)="navigateToReminder()">
@@ -11,9 +11,23 @@
 	</ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-	sadsada = {{message}}
-	<div *ngIf="shouldShowEmptyState">
+<ion-content>
+	<div *ngIf="!showSpinner && !shouldShowEmptyState">
+		<ion-list>
+			<ion-list-header>
+				Reminder list
+			</ion-list-header>
+			<ion-item (click)="openDetailPage(row)" *ngFor="let row of reminderData; let i = index;" [style.background]="bgcolors[i % bgcolors.length]">
+				<div>{{ row.getStartDateTimeObject().format('DD-MM-YYYY') }} - {{ row.getEndDateTimeObject().format('DD-MM-YYYY') }}</div>
+				<h1>{{ row.name }}</h1>
+				<progress-bar min="0" [max]="row.getTotalDays()" [progress]="row.getPercentage()" [avatar]="row.avatar"></progress-bar>
+			</ion-item>
+		</ion-list>
+	</div>
+	<div style="text-align:  center;" *ngIf="showSpinner">
+		<ion-spinner></ion-spinner>
+	</div>
+	<div *ngIf="!showSpinner && shouldShowEmptyState">
 		<img src="assets/images/clock.png">
 		<span>
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod placeat quisquam delectus enim adipisci repellendus quo, recusandae sunt iure obcaecati.
